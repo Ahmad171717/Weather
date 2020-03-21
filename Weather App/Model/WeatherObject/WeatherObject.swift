@@ -18,7 +18,6 @@ class WeatherObject: Object {
     var weather: [Weather]?
     var wind: Wind?
     var cityName = ""
-    var city: City? { City.city(with: cityName) }
     
     override func mapping(map: Map) {
         super.mapping(map: map)

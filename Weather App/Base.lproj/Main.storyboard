@@ -133,8 +133,8 @@
                                     <constraint firstAttribute="height" constant="50" id="k0z-08-i4q"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
-                                <state key="normal" title="Multi City">
-                                    <color key="titleColor" red="0.3919752836" green="0.13933977480000001" blue="0.36080092190000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.13519674540000001" green="0.85960549119999996" blue="0.78823256490000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -152,8 +152,8 @@
                                     <constraint firstAttribute="height" constant="50" id="wWZ-fR-ujP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
-                                <state key="normal" title="Current City">
-                                    <color key="titleColor" red="0.3919752836" green="0.13933977480000001" blue="0.36080092190000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.13519674540000001" green="0.85960549119999996" blue="0.78823256490000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -165,7 +165,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.3919752836" green="0.13933977480000001" blue="0.36080092190000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="PP4-ut-cP1" firstAttribute="top" secondItem="gu1-Dl-gAS" secondAttribute="bottom" constant="15" id="70z-41-ZQ2"/>
                             <constraint firstItem="PL7-AF-7fo" firstAttribute="trailing" secondItem="gu1-Dl-gAS" secondAttribute="trailing" constant="20" id="IZc-zO-DX7"/>
@@ -177,6 +176,10 @@
                         <viewLayoutGuide key="safeArea" id="PL7-AF-7fo"/>
                     </view>
                     <navigationItem key="navigationItem" id="sGx-zn-0al"/>
+                    <connections>
+                        <outlet property="buttonCurrentCity" destination="PP4-ut-cP1" id="M5y-en-5zm"/>
+                        <outlet property="buttonMultiCity" destination="gu1-Dl-gAS" id="Or7-sx-8D6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nUN-Ae-iPg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
