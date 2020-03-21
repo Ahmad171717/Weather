@@ -26,23 +26,6 @@ class City: Object {
         country <- map["country"]
         location <- map["coord"]
     }
-    
-    static func city(with name: String) -> City? {
-        var city: City?
-        
-        guard  City.cache == nil else {
-            city = City.cache?.filter { $0.name == name }.first
-            return city
-        }
-        
-        fetchCities().done { cities in
-            city = cities.filter { $0.name == name }.first
-            }.catch { error in
-                Alert.ok("Error", error.localizedDescription)
-        }
-        
-        return city
-    }
 }
 
 extension City: Listable {
