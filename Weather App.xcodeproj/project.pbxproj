@@ -305,6 +305,9 @@
 		E089F68024254D1100330BBB /* Weather App */ = {
 			isa = PBXGroup;
 			children = (
+				E089F68124254D1100330BBB /* AppDelegate.swift */,
+				E089F68324254D1100330BBB /* SceneDelegate.swift */,
+				E08BCBD72426A7CC00631C67 /* Storyboard */,
 				E089F6D0242579EC00330BBB /* Protocol */,
 				E089F6BB2425612500330BBB /* Extensions */,
 				E089F6B22425606600330BBB /* Utilities */,
@@ -313,12 +316,6 @@
 				E089F69B2425579100330BBB /* View */,
 				E089F69A2425578A00330BBB /* Controllers */,
 				E089F695242556B100330BBB /* SupportingFiles */,
-				E089F68124254D1100330BBB /* AppDelegate.swift */,
-				E089F68324254D1100330BBB /* SceneDelegate.swift */,
-				E089F68524254D1100330BBB /* LandingViewController.swift */,
-				E089F68724254D1100330BBB /* Main.storyboard */,
-				E089F68A24254D1400330BBB /* Assets.xcassets */,
-				E089F68C24254D1400330BBB /* LaunchScreen.storyboard */,
 				E089F68F24254D1400330BBB /* Info.plist */,
 			);
 			path = "Weather App";
@@ -327,6 +324,7 @@
 		E089F695242556B100330BBB /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E089F68A24254D1400330BBB /* Assets.xcassets */,
 				E089F696242556CE00330BBB /* Resources */,
 			);
 			path = SupportingFiles;
@@ -351,6 +349,7 @@
 		E089F69A2425578A00330BBB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E08BCBD82426A7DE00631C67 /* LandingController */,
 				E05DDD9C242628DE007D4782 /* CurrentCityController */,
 				E075F2832425AE3400571F8E /* MultiCityController */,
 				E089F6CD2425789000330BBB /* Base */,
@@ -540,6 +539,23 @@
 				E089F6E924257F7700330BBB /* ListCell.xib */,
 			);
 			path = ListCell;
+			sourceTree = "<group>";
+		};
+		E08BCBD72426A7CC00631C67 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				E089F68724254D1100330BBB /* Main.storyboard */,
+				E089F68C24254D1400330BBB /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		E08BCBD82426A7DE00631C67 /* LandingController */ = {
+			isa = PBXGroup;
+			children = (
+				E089F68524254D1100330BBB /* LandingViewController.swift */,
+			);
+			path = LandingController;
 			sourceTree = "<group>";
 		};
 		F4FE4DF213CA7494719E0702 /* Pods */ = {
