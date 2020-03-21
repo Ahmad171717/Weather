@@ -13,8 +13,23 @@ class LandingViewController: BaseViewController {
     
     override var shouldHideNavigationBar: Bool { true }
     
+    @IBOutlet private (set) weak var buttonMultiCity: UIButton?
+    @IBOutlet private (set) weak var buttonCurrentCity: UIButton?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        buttonMultiCity?.setTitle("Multi City", for: .normal)
+        buttonCurrentCity?.setTitle("Current City", for: .normal)
+    }
+    
     @IBAction func buttonActionMultiCity(_ sender: UIButton) {
-        fetchCities()
+        LoadingIndicator.shared.show()
+        
+        // add small delay because it's a big data to load
+        delay(100) { [weak self] in
+            self?.fetchCities()
+        }
     }
     
     @IBAction func buttonActionCurrentCity(_ sender: UIButton) {
@@ -38,7 +53,7 @@ class LandingViewController: BaseViewController {
     }
 }
 
-private extension LandingViewController {
+extension LandingViewController {
     func fetchCities() {
         LoadingIndicator.shared.show()
         
@@ -63,7 +78,7 @@ private extension LandingViewController {
     
     func fetchCitiesWeather(cities: [Listable]?) {
         LoadingIndicator.shared.show()
-        guard let cities = cities as? [City] else { return }
+        guard let cities = cities as? [City], cities.count > 2, cities.count < 8 else { return }
         
         // get selected city id
         let citiesId = cities.map { $0.id }
